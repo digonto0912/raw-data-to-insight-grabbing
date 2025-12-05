@@ -1,0 +1,215 @@
+{
+    "post_metadata": {
+        "post_id": "t3_abcdefg123",
+        "url": "https://www.reddit.com/r/singularity/comments/abcdefg/medical_holy_grail_israeli_researchers_isolate/",
+        "created_utc": "2025-12-03T07:01:19+00:00",
+        "score": 0,
+        "num_comments": 3,
+        "subreddit": "singularity",
+        "post_age_days": 0
+    },
+    "classification": {
+        "topic_category": "Science & Technology",
+        "post_type": "News Article",
+        "user_intent": "Discussion",
+        "confidence": 0.82
+    },
+    "emotion_analysis": {
+        "primary_emotion": "Curiosity",
+        "emotion_strength": 6,
+        "comment_emotions": [
+            "Skepticism",
+            "Concern"
+        ],
+        "emotional_clusters": [
+            "Doubt",
+            "Fear"
+        ],
+        "emotion_confidence": 0.74
+    },
+    "pain_points": {
+        "pain_points": [
+            "Clickbait titles",
+            "Genocide"
+        ],
+        "pain_point_clusters": [
+            "Misinformation",
+            "Social Issues"
+        ],
+        "frequency": {
+            "Misinformation": 1,
+            "Social Issues": 1
+        },
+        "pain_sentences": [
+            "This title is clickbait.",
+            "What about the genocide happening?"
+        ]
+    },
+    "triggers": {
+        "root_causes": [
+            "Media exaggeration",
+            "Lack of context in headlines",
+            "Political tension in the region"
+        ],
+        "system_limitations": [
+            "News algorithms favor sensational content"
+        ],
+        "environmental_factors": [
+            "Ongoing geopolitical conflicts"
+        ],
+        "emotional_drivers": [
+            "Distrust in media",
+            "Fear of manipulation"
+        ]
+    },
+    "desires": {
+        "explicit_desires": [],
+        "implicit_desires": [
+            "Understanding",
+            "Actionable Information"
+        ],
+        "direction_of_desire": [
+            "Truth",
+            "Progress"
+        ],
+        "desire_sentences": [
+            "I want real information, not clickbait."
+        ]
+    },
+    "behaviors": {
+        "current_tools": [
+            "Reddit discussions",
+            "News aggregators"
+        ],
+        "workarounds": [
+            "Fact-checking manually",
+            "Reading scientific papers"
+        ],
+        "failed_attempts": [
+            "Trusting article titles"
+        ],
+        "search_patterns": [
+            "'Is this real?'",
+            "'Source?'",
+            "'Original research paper'"
+        ],
+        "behavior_intent": "Verify truth before reacting"
+    },
+    "keywords": {
+        "high_frequency_phrases": [
+            "clickbait",
+            "research",
+            "aging cells"
+        ],
+        "pain_phrases": [
+            "Why is this headline misleading?"
+        ],
+        "desire_phrases": [
+            "We need real data",
+            "Give proper context"
+        ],
+        "topic_keywords": [
+            "aging",
+            "cells",
+            "research",
+            "science",
+            "Israel"
+        ]
+    },
+    "opportunities": {
+        "market_gaps": [
+            "Reliable aging research information"
+        ],
+        "unmet_needs": [
+            "Transparent and accurate news reporting"
+        ],
+        "feature_requests": [
+            "Verification of sources",
+            "Contextualization of headlines"
+        ],
+        "manual_hacks": [],
+        "opportunity_context": "Users want trustworthy science summaries."
+    },
+    "user_archetypes": {
+        "user_types": [
+            "Skeptic",
+            "Curious"
+        ],
+        "motivations": [
+            "Seeking truth",
+            "Contributing to discussions"
+        ],
+        "identity_indicators": [
+            "technical knowledge",
+            "fact-checking behavior"
+        ]
+    },
+    "community_consensus": {
+        "recurring_advice": [],
+        "recurring_complaints": [
+            "Clickbait titles"
+        ],
+        "myths_misunderstandings": [],
+        "debates": [
+            "Accuracy of news reporting"
+        ],
+        "community_norms": [
+            "Critical thinking",
+            "Questioning sources"
+        ]
+    },
+    "risks": {
+        "fears": [
+            "Misinformation",
+            "Manipulation"
+        ],
+        "doubts": [
+            "Reliability of the research"
+        ],
+        "risk_perceptions": [
+            "Potential for misuse of information"
+        ],
+        "edge_cases": [
+            "Political escalation in comments"
+        ]
+    },
+    "contradictions": {
+        "topic_conflicts": [
+            {
+                "topic": "Research reliability",
+                "positions": [
+                    "Hope for progress",
+                    "Fear of misinformation"
+                ]
+            }
+        ]
+    },
+    "opportunity_score": {
+        "pain_intensity": 6,
+        "pain_frequency": 5,
+        "market_size": 3,
+        "competition_gap": 8,
+        "desire_strength": 4,
+        "workaround_effort": 7,
+        "spending_signals": 1,
+        "final_score": 34
+    },
+    "context": {
+        "sarcasm_flags": [],
+        "political_context": false,
+        "external_references": [],
+        "sensitivity_level": 0
+    },
+    "source_evaluation": {
+        "credibility_score": 0.0,
+        "bias_indicators": [],
+        "fact_check_required": false
+    },
+    "action_signals": {
+        "willingness_to_pay": [],
+        "requests_for_tools": [],
+        "calls_for_action": [],
+        "solution_search_intent": []
+    },
+    "high_level_summary": "The post shares a news article about aging research, with commenters showing skepticism and concern due to misleading headlines and political context. Users want trustworthy scientific information and transparent reporting. The main opportunity is building tools that verify and contextualize scientific news."
+}
