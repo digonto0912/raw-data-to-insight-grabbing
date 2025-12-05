@@ -54,12 +54,27 @@ def main():
             result = analyze_post(post_text)
             
             # Add post metadata to the result
+            from datetime import datetime
+            
+            # Calculate post age
+            created_utc = post.get("created_utc", "")
+            post_age_days = 0
+            if created_utc:
+                try:
+                    post_date = datetime.fromisoformat(created_utc.replace('Z', '+00:00'))
+                    now = datetime.now(post_date.tzinfo)
+                    post_age_days = (now - post_date).days
+                except:
+                    pass
+            
             post_metadata = PostMetadata(
                 post_id=post.get("post_id", "unknown"),
                 url=post.get("url", "unknown"),
-                created_utc=post.get("created_utc", ""),
+                created_utc=created_utc,
                 score=post.get("score", 0),
-                num_comments=post.get("num_comments", 0)
+                num_comments=post.get("num_comments", 0),
+                subreddit=post.get("subreddit", "unknown"),
+                post_age_days=post_age_days
             )
             
             # Create final result with metadata
