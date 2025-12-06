@@ -83,8 +83,9 @@ def main():
                 **result.model_dump()
             }
             
-            # Save result with post_id in filename
-            output_file = os.path.join(OUTPUT_DIR, f"analysis_{post_id}.json")
+            # Save result with index in filename (post_1.json, post_2.json, etc.)
+            # This is safer for Colab to prevent data loss if it crashes
+            output_file = os.path.join(OUTPUT_DIR, f"post_{idx}.json")
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(final_result, f, indent=2, ensure_ascii=False)
             
