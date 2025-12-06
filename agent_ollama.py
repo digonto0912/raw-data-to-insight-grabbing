@@ -3,6 +3,7 @@ from typing import Dict, Any
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
+from langchain.output_parsers import RetryOutputParser
 from dotenv import load_dotenv
 
 from models import FinalSummary
@@ -11,14 +12,22 @@ from models import FinalSummary
 load_dotenv()
 
 # Initialize Ollama Chat Model
+# CONFIGURATION: Choose your model
+# "mistral"     = Best Quality (7B params) - Slower (3-10 mins/post)
+# "llama3.2"    = Best Speed   (3B params) - Faster (1-3 mins/post)
+# "phi3"        = Good Balance (3.8B params) - Fast
+
+MODEL_NAME = "llama3.2"  # Change this to "llama3.2" for 3x speed boost!
+
 llm = ChatOllama(
-    model="mistral",  # Using Mistral 7B for deep analysis
-    temperature=0.1,  # Slightly higher for nuanced insights
+    model=MODEL_NAME,
+    temperature=0.1,
     base_url="http://localhost:11434"
 )
 
 # Define the parser
 parser = PydanticOutputParser(pydantic_object=FinalSummary)
+retry_parser = RetryOutputParser.from_llm(parser=parser, llm=llm)
 
 # Define the ELITE "God-Tier" prompt for forensic analysis
 system_prompt = """
@@ -93,7 +102,9 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 # Create the chain
-chain = prompt | llm | parser
+# chain = prompt | llm | parser
+# Use retry parser
+chain = prompt | llm | retry_parser
 
 def analyze_post(post_content: str) -> FinalSummary:
     """

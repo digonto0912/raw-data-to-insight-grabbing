@@ -7,9 +7,16 @@ from models import PostMetadata
 # Configuration: Choose your LLM provider
 USE_OLLAMA = True  # Set to True for local Ollama, False for Groq cloud API
 
+# Ollama Model Selection (Only used if USE_OLLAMA is True)
+# "mistral" = Best Quality (Slow on CPU)
+# "phi3"    = Best Speed (2-3x faster, Good Quality)
+# "llama3.2:3b" = Balanced
+OLLAMA_MODEL = "mistral" 
+
 if USE_OLLAMA:
+    os.environ["OLLAMA_MODEL"] = OLLAMA_MODEL
     from agent_ollama import analyze_post
-    print("🖥️  Using Ollama (Local, Free, CPU-only)")
+    print(f"🖥️  Using Ollama (Local, Free, CPU-only) | Model: {OLLAMA_MODEL}")
 else:
     from agent import analyze_post
     print("☁️  Using Groq (Cloud API, Rate Limited)")
